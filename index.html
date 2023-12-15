@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
+<title>E.B. Clothing</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -49,6 +49,48 @@ body {
   background-color: #ddd;
   color: black;
 }
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: 50;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #8b948c;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+</head>
+<body>
+
 </style>
 </head>
 <body>
@@ -66,7 +108,16 @@ body {
 </div>
 
 
-<h2>Which Type of Clothing?</h2>
+
+
+<div class="container">
+  <img src="https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-us-master-catalog/default/dw32f3b9ef/images/large/MG078Z/8796/MG078Z-8796-3.jpg?sw=837&sh=1046&sm=fit&q=70" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Clothing</div>
+  </div>
+</div>
+  
+<h2>Which Type of Clothing Suits You?</h2>
 
 
 <form action="/action_page.php">
@@ -79,5 +130,6 @@ body {
   <input type="submit" value="Submit">
 </form> 
 
+</form>
 </body>
 </html>
